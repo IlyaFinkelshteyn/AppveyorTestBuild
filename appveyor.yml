@@ -4,7 +4,7 @@
  - nuget restore
 
 build:
-  project: .\AppveyorTestBuild\AppveyorTestBuild.sln      # path to Visual Studio solution or project
+  project: .\AppveyorTestBuild      # path to Visual Studio solution or project
   verbosity: minimal
   
 nuget:
