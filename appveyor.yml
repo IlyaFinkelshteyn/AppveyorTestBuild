@@ -1,4 +1,6 @@
-﻿install:
+﻿image: Visual Studio 2015
+
+ install:
  - ps: $env:Path -split ";"
  - cmd: where nuget
  - ps: nuget help | findstr /psi "version"
