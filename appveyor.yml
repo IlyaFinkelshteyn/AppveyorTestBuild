@@ -1,12 +1,13 @@
 ﻿
-image: Visual Studio 2015
+#image: Visual Studio 2015
 
 install:
  - ps: $env:Path -split ";"
  - cmd: where nuget
  - ps: nuget help | findstr /psi "version"
- - ps: if (Test-Path 'C:\Tools\NuGet3') { $nugetDir = 'C:\Tools\NuGet3' } else { $nugetDir = 'C:\Tools\NuGet' }
- - ps: (New-Object Net.WebClient).DownloadFile('https://dist.nuget.org/win-x86-commandline/v3.5.0/NuGet.exe', "$nugetDir\NuGet.exe")
+ #- ps: if (Test-Path 'C:\Tools\NuGet3') { $nugetDir = 'C:\Tools\NuGet3' } else { $nugetDir = 'C:\Tools\NuGet' }
+ #- ps: (New-Object Net.WebClient).DownloadFile('https://dist.nuget.org/win-x86-commandline/v3.5.0/NuGet.exe', "$nugetDir\NuGet.exe")
+ - ps: (New-Object Net.WebClient).DownloadFile('https://dist.nuget.org/win-x86-commandline/v3.5.0/NuGet.exe', ".\NuGet.exe")
  - ps: nuget help | findstr /psi "version"
  - nuget restore
 
