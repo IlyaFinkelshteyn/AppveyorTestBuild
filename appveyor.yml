@@ -1,4 +1,5 @@
 ﻿install:
+ - ps: $env:Path -split ";"
  - cmd: where nuget
  - ps: nuget help | findstr /psi "version"
  - ps: if (Test-Path 'C:\Tools\NuGet3') { $nugetDir = 'C:\Tools\NuGet3' } else { $nugetDir = 'C:\Tools\NuGet' }
